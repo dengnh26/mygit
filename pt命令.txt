@@ -1,0 +1,9 @@
+pt-online-schema-change \
+ --user=visa \
+ --password='!@#Abc123' \
+ --host='rm-wz9z9a6oh88838796.mysql.rds.aliyuncs.com' P=3306,D='idsp',t='order_info' \
+  --alter="ADD column is_delete tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除 0未删除 1已删除' " \
+ --no-version-check \
+  --charset=utf8 \
+ --progress percentage,5 \
+--execute
